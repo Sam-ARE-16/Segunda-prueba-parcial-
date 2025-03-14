@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio sobre salud y buena alimentación. Descubre artículos, videos y consejos para mejorar tu bienestar.">
+    <meta name="keywords" content="salud, alimentación, fitness, bienestar">
+    <meta name="author" content="Samuel Augusto">
+    <title>Salud y Bienestar</title>
+    <link rel="icon" href="images/icono.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('images/fondo0.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #121212 !important;
+            color: #ffffff !important;
+        }
+        .dark-mode nav {
+            background-color: #1e1e1e !important;
+        }
+        .dark-mode a {
+            color: #bbbbbb !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Salud & Bienestar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#articulos">Artículos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#videos">Videos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#privacidad">Política de Privacidad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#enlaces">Enlaces de Interés</a></li>
+                        <li class="nav-item"><button id="modoOscuro" class="btn btn-dark">Modo Oscuro</button></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container mt-4">
+        <section id="inicio">
+            <h1>Bienvenido a Salud & Bienestar</h1>
+            <h2>Tu salud debe ser tu principal prioridad.</h2>
+            <p>En este sitio encontrarás información valiosa sobre salud, bienestar y nutrición. Nuestro objetivo es ayudarte a mejorar tu estilo de vida con consejos, artículos y recursos diseñados para promover hábitos saludables. Descubre cómo cuidar tu cuerpo, alimentarte mejor y mantener un equilibrio físico y mental para una vida más plena y duradera.</p>
+            <img src="images/banner.jpg" class="img-fluid" alt="Salud y bienestar">
+        </section>
+        
+        <section id="articulos" class="mt-4">
+            <h2>Artículos sobre salud</h2>
+            <p>Aquí esta una página de una ORG en la que podrás enontrar distintos artículos sobre salud:</p>
+            <iframe src="https://saludymedicina.org/post/category/articulos-cientificos" width="100%" height="500"></iframe>
+        </section>
+        
+        <section id="videos" class="mt-4">
+            <h2>Enlaces de Interés:</h2>
+            <h3>Videos de salud y buena alimentación.</h3>
+            <p>Aquí hay un par de videos del DR. La Rosa, un profesional que se dedica a hacer videos en youtube sobre distintos temas de la salud, dales un vistazo.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LMlM72Z9b2Q" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wiJzsSP_5Ao" allowfullscreen></iframe>
+        </section>
+        
+        <section id="Redes Sociales" class="mt-4">
+            <h2>Conéctate con Nosotros</h2>
+            <h3>Síguenos en nuestras redes sociales:</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/smx.sami.7" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/smx_btd_/" target="_blank">Instagram</a></li>
+            </ul>
+        </section>
+
+        <section id="contacto" class="mt-4">
+            <h2>Información de Contacto</h2>
+            <h4>Teléfono: 829-747-4788</h4>
+            <h4>Email: <a href="mailto:samuelaugustor23@gmail.com">samuelaugustor23@gmail.com</a></h4>
+            <h4>Email institucional: <a href="mailto:sr23-1733@unphu.edu.do">sr23-1733@unphu.edu.do</a></h4>
+        </section>
+        
+        
+
+
+    
+        <section id="privacidad" class="mt-4">
+            <h2>Política de Privacidad</h2>
+            <h5>Al acceder a esta página, te brindamos información sobre como mejorar tu salud a través de artículos y videos. 
+                Queremos que te comprometas a cambiar tus habitos y estilo de vida.</h5>
+            <h5>Nos preocupamos por tu bienestar y queremos ofrecerte la mejor información sobre salud y alimentación.Este sitio no recopila información personal.</h5>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById("modoOscuro").addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("modoOscuro", document.body.classList.contains("dark-mode"));
+        });
+        
+        // Aplicar modo oscuro si estaba activado previamente
+        if (localStorage.getItem("modoOscuro") === "true") {
+            document.body.classList.add("dark-mode");
+        }
+    </script>
+</body>
+</html>
